@@ -127,17 +127,20 @@ local function sendWebhook(batch)
         local maxPlrs   = Players.MaxPlayers
         local embed = {
             title = "🧠 Pet(s) Found! ("..bracket..")",
-            description = "Brainrot-worthy pet(s) detected!",
+            description = "idk some brainrots found buddy!",
             fields = {
                 {name="User", value=LocalPlayer.Name},
                 {name="Pet(s)", value=table.concat(lines,"\n")},
                 {name="Players", value=plrCount.."/"..maxPlrs, inline=true},
                 {name="Server Link", value=serverLink},
                 {name="Time", value=os.date("%Y-%m-%d %H:%M:%S")}
-            },
+            },    
+            ["footer"] = {
+            ["text"] = "Dead Hub Joiner!"
+        },
             color = 0xff00ff
         }
-        local payload = HttpService:JSONEncode({content="🚨 SECRET PET DETECTED!", embeds={embed}})
+        local payload = HttpService:JSONEncode({content="<@&1425432437927968908> chop chop wake up bihs", embeds={embed}})
 
         local req = http_request or request or syn and syn.request
         if req then
