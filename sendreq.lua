@@ -12,10 +12,6 @@ until LocalPlayer
 
 --// USER CONFIG – set these in your script-executor UI or via getgenv()
 --  webhooks for the 3 value brackets
-getgenv().webhook1m5m   = ""   -- 1m-5m
-getgenv().webhook6m20m  = ""   -- 6m-20m
-getgenv().webhook20mUp  = ""   -- 20m+
-
 --// state
 local visitedJobIds = {[game.JobId] = true}
 local hops = 0
